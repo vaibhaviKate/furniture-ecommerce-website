@@ -1,0 +1,27 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+    User Login
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row" style="margin-top: 6%">
+            <div class="col-md-8">
+                {% if request.user.is_authenticated %}
+                    <h4>already logged in</h4>
+                {% else %}
+                <h4 class="page-header">Log in</h4>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}<br>
+
+                    <input type="submit" class="btn btn-primary" value="Log In">
+                </form>
+                <p>{{error}}</p>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

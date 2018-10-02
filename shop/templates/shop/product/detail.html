@@ -1,0 +1,40 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container" xmlns:cart="http://www.w3.org/1999/xhtml">
+      <div class="row" style="margin-top: 6%">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+              <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-md-6 text-right">
+                            <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/no-image-available-sign.jpg' %} {% endif %}" alt="..." style="height: 170px; width: auto">
+                        </div>
+                        <div class="col-md-6" style="padding-left: 20px">
+                            <h3>{{ product.name }}</h3>
+                            <p class="text-muted" style="color : #000000"><h4>INR. {{ product.price }}</h4></p>
+
+                            <p>{{ product.description|safe|linebreaksbr }}</p>
+                            <form action="{% url "cart:cart_add" product.id %}" method="post">
+                                {% csrf_token %}
+                                {{ cart_product_form }}
+                                <input type="submit" value="add to cart" class="btn btn-primary btn-sm">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+{% endblock %}

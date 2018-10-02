@@ -1,0 +1,43 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="13">
+            <item index="0" class="java.lang.String" itemvalue="cart:cart_remove" />
+            <item index="1" class="java.lang.String" itemvalue="cart:cart_detail" />
+            <item index="2" class="java.lang.String" itemvalue="cart:cart_add" />
+            <item index="3" class="java.lang.String" itemvalue="shop:product_list" />
+            <item index="4" class="java.lang.String" itemvalue="orders:order_create" />
+            <item index="5" class="java.lang.String" itemvalue="c:\users\vishwas\desktop\ecommerce\shop\static\img\bg.jpg" />
+            <item index="6" class="java.lang.String" itemvalue="img" />
+            <item index="7" class="java.lang.String" itemvalue="color:" />
+            <item index="8" class="java.lang.String" itemvalue="shop:" />
+            <item index="9" class="java.lang.String" itemvalue="userformview.get" />
+            <item index="10" class="java.lang.String" itemvalue="userformview" />
+            <item index="11" class="java.lang.String" itemvalue="shop:logout" />
+            <item index="12" class="java.lang.String" itemvalue="shop:user_logout" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="body" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

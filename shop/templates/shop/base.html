@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<body lang="en" xmlns:cart="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Furniture Online{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+<style>
+
+    #bg{
+
+    background-repeat: no-repeat;
+    background-size : cover;
+    background-attachment: fixed;
+}
+</style>
+
+</head>
+
+{% include 'shop/navbar.html' %}
+<body id="bg" style="background-image: url('{% static "img/bg.jpg" %}')";>
+<div class="container">
+    <div class="row" style="margin-top: 6%">
+         <button class="btn btn-info pull-right">
+            {% with total_items=cart|length %}
+                {% if cart|length > 0 %}
+                    My Shopping Order:
+                    <a href="{% url "cart:cart_detail" %}" style="color: #ffffff">
+                        {{ total_items }} item{{ total_items|pluralize }},INR. {{ cart.get_total_price }}
+                    </a>
+                    {% else %}
+                    Your cart is empty.
+                {% endif %}
+            {% endwith %}
+         </button>
+    </div>
+</div>
+
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
